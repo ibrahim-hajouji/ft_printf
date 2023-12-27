@@ -6,13 +6,11 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 08:32:39 by ihajouji          #+#    #+#             */
-/*   Updated: 2023/12/23 02:49:39 by ihajouji         ###   ########.fr       */
+/*   Updated: 2023/12/27 11:39:29 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	format(va_list args, char c)
 {
@@ -38,6 +36,8 @@ static int	format(va_list args, char c)
 		printf_length += ft_putstr("0x");
 		printf_length += ft_puthex(va_arg(args, unsigned long long), 'a');
 	}
+	else
+		printf_length += ft_putchar(c);
 	return (printf_length);
 }
 
@@ -66,3 +66,37 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (printf_length);
 }
+/* int main (void)
+{
+	char  *str = "hello";
+	unsigned int n = -2147483648;
+
+	
+	ft_printf("%d ^ \n",ft_printf("%s\n", str));
+	printf("%d ^ \n",printf("%s\n", str));
+	
+	ft_printf("%d ^ \n",ft_printf("%d\n", 421337));
+	printf("%d ^ \n",printf("%d\n", 421337));
+	
+	ft_printf("%d ^ \n",ft_printf("%i\n", 421337));
+	printf("%d ^ \n",printf("%i\n", 421337));
+	
+	ft_printf("%d ^ \n",ft_printf("%u\n", n));
+	printf("%d ^ \n",printf("%u\n", n));
+
+	ft_printf("%d ^ \n",ft_printf("%x\n", 421337));
+	printf("%d ^ \n",printf("%x\n", 421337));
+	
+	ft_printf("%d ^ \n",ft_printf("%X\n", 421337));
+	printf("%d ^ \n",printf("%X\n", 421337));
+
+	ft_printf("%d ^ \n",ft_printf("%%\n"));
+	printf("%d ^ \n",printf("%%\n"));
+	
+	ft_printf("%d ^ \n",ft_printf("%m\n", str));
+	printf("%d ^ \n",printf("%m\n", str));
+	
+	ft_printf("%d ^ \n",ft_printf("%s\n"));
+	printf("%d ^ \n",printf("%s\n"));
+	
+} */

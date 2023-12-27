@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 17:17:56 by ihajouji          #+#    #+#             */
-/*   Updated: 2023/12/23 00:40:25 by ihajouji         ###   ########.fr       */
+/*   Updated: 2023/12/26 15:54:54 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ int	ft_puthex(unsigned long long number, char c)
 	ft_putchar(number);
 	return (i);
 }
-/* int main ()
-{
-	int s3  = 1212;
-	ft_printf("%d\n", ft_printf("%x", s3));
-	printf("%d\n", printf("%x", s3));
-} */
+// int main ()
+// {
+// 	int s3  = 1212;
+// 	ft_printf("%d\n", ft_printf("%x", s3));
+// 	printf("%d\n", printf("%x", s3));
+// }
